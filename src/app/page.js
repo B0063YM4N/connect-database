@@ -35,7 +35,11 @@ export default function Home() {
 
   }
   return (
-    <form onSubmit={habdleAddData}>
+    <div>
+      {!isLoading && (
+        JSON.stringify(data)
+      )}
+          <form onSubmit={habdleAddData}>
       <input
         className="text-blue-900"
         type="number"
@@ -70,6 +74,8 @@ export default function Home() {
       />
       <button type='submit'>ADD</button>
     </form>
+    </div>
+
   )
 }
 
