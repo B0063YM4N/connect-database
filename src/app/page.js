@@ -1,12 +1,8 @@
 "use client"
 
-import { useEffect } from "react";
 import useSWR from "swr";
 
 export default function Home() {
-
-  const fetcher = (...args) => fetch(...args).then((res) => res.json());
-  const { data, mutate, error, isLoading } = useSWR(`/api/data`, fetcher);
 
   const habdleAddData = async (e) => {
     e.preventDefault();
@@ -29,6 +25,7 @@ export default function Home() {
           price4,
         }),
       });
+      mutate()
     } catch (error) {
       console.log(error);
     }
@@ -36,10 +33,7 @@ export default function Home() {
   }
   return (
     <div>
-      {!isLoading && (
-        JSON.stringify(data)
-      )}
-          <form onSubmit={habdleAddData}>
+      <form onSubmit={habdleAddData}>
       <input
         className="text-blue-900"
         type="number"
@@ -78,13 +72,3 @@ export default function Home() {
 
   )
 }
-
-
-/*
-    <div>
-      {!isLoading && (
-        JSON.stringify(data)
-      )}
-    </div>
-    <div>
-*/

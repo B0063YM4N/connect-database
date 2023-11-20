@@ -3,7 +3,7 @@ import data from "../../../../data";
 
 export const GET = async (req) => {
     
-      return new NextResponse(JSON.stringify(data), { status: 201 });
+  return new NextResponse(JSON.stringify(data), { status: 201 });
 }
 
 

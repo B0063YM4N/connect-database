@@ -7,7 +7,7 @@ export default function Idk() {
     const { data, mutate, error, isLoading } = useSWR(`https://connect-database.vercel.app/api/data`, fetcher);
 
     !isLoading && console.log(data);
-
+    !isLoading && console.log(error);
   return (
     <div>Idk</div>
   )
