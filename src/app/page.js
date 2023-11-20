@@ -1,7 +1,5 @@
 "use client"
 
-import useSWR from "swr";
-
 export default function Home() {
 
   const habdleAddData = async (e) => {
@@ -25,12 +23,12 @@ export default function Home() {
           price4,
         }),
       });
-      mutate()
     } catch (error) {
       console.log(error);
     }
 
   }
+  
   return (
     <div>
       <form onSubmit={habdleAddData}>

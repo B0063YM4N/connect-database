@@ -2,7 +2,13 @@ import { NextResponse } from "next/server";
 import data from "../../../../data";
 
 export const GET = async (req) => {
-    
+    try {
+      JSON.stringify(data)
+
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
   return new NextResponse(JSON.stringify(data), { status: 201 });
 }
 
