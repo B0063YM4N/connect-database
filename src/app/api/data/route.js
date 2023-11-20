@@ -3,9 +3,9 @@ import data from "../../../../data";
 
 export const GET = async (req) => {
     try {
-      JSON.stringify(data)
+      
 
-      console.log(data);
+      console.log(JSON.stringify(data));
     } catch (error) {
       console.log(error);
     }
