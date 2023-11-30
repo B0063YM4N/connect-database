@@ -1,28 +1,61 @@
 import { NextResponse } from "next/server";
-import data from "../../../../data";
+import connect from "@/utils/db";
+import Data from "@/models/Data";
 
-export const GET = async (req) => {
-    try {
-      
+export const GET = async (request) => {
+  try {
+    await connect();
 
-      console.log(JSON.stringify(data));
-    } catch (error) {
-      console.log(error);
-    }
-  return new NextResponse(JSON.stringify(data), { status: 201 });
+
+    const data = await Data.find();
+
+    return new NextResponse(JSON.stringify(data), { status: 200 });
+  } catch (err) {
+    return new NextResponse("Database Error", { status: 500 });
+  }
 }
 
 
-export const POST = async (req) => {
-  const { price1, price2, price3, price4 } = await req.json();
+export const POST = async (request) => {
+  const body = await request.json();
 
-  if (price1 !== undefined && price2 !== undefined && price3 !== undefined && price4 !== undefined) {
-    data.data[0].price = price1;
-    data.data[1].price = price2;
-    data.data[2].price = price3;
-    data.data[3].price = price4;
+  const newData = Data(body);
+
+  console.log(body);
+
+
+  try {
+      await connect();
+
+      if (body.price1 !== null && body.price1 !== "" && body.price1 !== undefined) {
+        await Data.findOneAndUpdate(
+          { _id: "6568613c003fcd940a77a1ad"},
+          { price: body.price1 } 
+        );
+      }
+        if (body.price2 !== null && body.price2 !== "" && body.price2 !== undefined) {
+          await Data.findOneAndUpdate(
+            { _id: "6568613e003fcd940a77a1af"},
+             { price: body.price2 } 
+          );
+        }
+        if (body.price3 !== null && body.price3 !== "" && body.price3 !== undefined) {
+          await Data.findOneAndUpdate(
+          { _id: "6568613e003fcd940a77a1b1"},
+           { price: body.price3 } 
+        );
+        }
+        if (body.price4 !== null && body.price4 !== "" && body.price4 !== undefined) {
+          await Data.findOneAndUpdate(
+          { _id: "65686159003fcd940a77a1b3"},
+           { price: body.price4 } 
+        );
+        }
+
+      // await newData.save()
+
+      return new NextResponse("Data has been created", { status: 201 });
+  } catch (error) {
+      return new NextResponse("Database Error", { status: 500 });
   }
-  
-
-  return new NextResponse(JSON.stringify(data), { status: 201 });
 }

@@ -38,7 +38,6 @@ export default function Home() {
         step="any"
         id="price1"
         name="price1"
-        required
       />
       <input
         className="text-blue-900"
@@ -46,7 +45,6 @@ export default function Home() {
         step="any"
         id="price2"
         name="price2"
-        required
       />
       <input
         className="text-blue-900"
@@ -54,7 +52,6 @@ export default function Home() {
         step="any"
         id="price3"
         name="price3"
-        required
       />
       <input
         className="text-blue-900"
@@ -62,7 +59,6 @@ export default function Home() {
         step="any"
         id="price4"
         name="price4"
-        required
       />
       <button type='submit'>ADD</button>
     </form>
