@@ -27,30 +27,30 @@ export const POST = async (request) => {
   try {
       await connect();
 
-      // if (body.price1 !== null && body.price1 !== "" && body.price1 !== undefined) {
-      //   await Data.findOneAndUpdate(
-      //     { _id: "6568613c003fcd940a77a1ad"},
-      //     { price: body.price1 } 
-      //   );
-      // }
-      //   if (body.price2 !== null && body.price2 !== "" && body.price2 !== undefined) {
-      //     await Data.findOneAndUpdate(
-      //       { _id: "6568613e003fcd940a77a1af"},
-      //        { price: body.price2 } 
-      //     );
-      //   }
-      //   if (body.price3 !== null && body.price3 !== "" && body.price3 !== undefined) {
-      //     await Data.findOneAndUpdate(
-      //     { _id: "6568613e003fcd940a77a1b1"},
-      //      { price: body.price3 } 
-      //   );
-      //   }
-      //   if (body.price4 !== null && body.price4 !== "" && body.price4 !== undefined) {
-      //     await Data.findOneAndUpdate(
-      //     { _id: "65686159003fcd940a77a1b3"},
-      //      { price: body.price4 } 
-      //   );
-      //   }
+      if (body.price1 !== null && body.price1 !== "" && body.price1 !== undefined) {
+        await Data.findOneAndUpdate(
+          { _id: "65686b2f505b0981400de648"},
+          { price: body.price1 } 
+        );
+      }
+        if (body.price2 !== null && body.price2 !== "" && body.price2 !== undefined) {
+          await Data.findOneAndUpdate(
+            { _id: "65686b2f505b0981400de64c"},
+             { price: body.price2 } 
+          );
+        }
+        if (body.price3 !== null && body.price3 !== "" && body.price3 !== undefined) {
+          await Data.findOneAndUpdate(
+          { _id: "65686b2f505b0981400de647"},
+           { price: body.price3 } 
+        );
+        }
+        if (body.price4 !== null && body.price4 !== "" && body.price4 !== undefined) {
+          await Data.findOneAndUpdate(
+          { _id: "65686b2e505b0981400de646"},
+           { price: body.price4 } 
+        );
+        }
 
       // await Data.findOneAndUpdate(
       //       { _id: "656865c28f74a90a4e59677a"},
@@ -61,46 +61,46 @@ export const POST = async (request) => {
           //   { _id: "656865c28f74a90a4e59677a"},
           //    { $push: {data: body.data} },
           // );
-          if (body.price1 !== null && body.price1 !== "" && body.price1 !== undefined) {
-            await Data.updateOne(
-              { _id: "656865c28f74a90a4e59677a",
-                'data._id': "6568675f1db1fa383615b029",
-            },
-               {$set: {
-                'data.$.price': body.price1
-               } },
-            );
-          }
-          if (body.price2 !== null && body.price2 !== "" && body.price2 !== undefined) {
-            await Data.updateOne(
-              { _id: "656865c28f74a90a4e59677a",
-                'data._id': "6568679e1db1fa383615b02d",
-            },
-               {$set: {
-                'data.$.price': body.price2
-               } },
-            );
-          }
-          if (body.price3 !== null && body.price3 !== "" && body.price3 !== undefined) {
-            await Data.updateOne(
-              { _id: "656865c28f74a90a4e59677a",
-                'data._id': "6568679e1db1fa383615b031",
-            },
-               {$set: {
-                'data.$.price': body.price3
-               } },
-            );
-          }
-          if (body.price4 !== null && body.price4 !== "" && body.price4 !== undefined) {
-            await Data.updateOne(
-              { _id: "656865c28f74a90a4e59677a",
-                'data._id': "6568679e1db1fa383615b035",
-            },
-               {$set: {
-                'data.$.price': body.price4
-               } },
-            );  
-          }
+          // if (body.price1 !== null && body.price1 !== "" && body.price1 !== undefined) {
+          //   await Data.updateOne(
+          //     { _id: "656865c28f74a90a4e59677a",
+          //       'data._id': "6568675f1db1fa383615b029",
+          //   },
+          //      {$set: {
+          //       'data.$.price': body.price1
+          //      } },
+          //   );
+          // }
+          // if (body.price2 !== null && body.price2 !== "" && body.price2 !== undefined) {
+          //   await Data.updateOne(
+          //     { _id: "656865c28f74a90a4e59677a",
+          //       'data._id': "6568679e1db1fa383615b02d",
+          //   },
+          //      {$set: {
+          //       'data.$.price': body.price2
+          //      } },
+          //   );
+          // }
+          // if (body.price3 !== null && body.price3 !== "" && body.price3 !== undefined) {
+          //   await Data.updateOne(
+          //     { _id: "656865c28f74a90a4e59677a",
+          //       'data._id': "6568679e1db1fa383615b031",
+          //   },
+          //      {$set: {
+          //       'data.$.price': body.price3
+          //      } },
+          //   );
+          // }
+          // if (body.price4 !== null && body.price4 !== "" && body.price4 !== undefined) {
+          //   await Data.updateOne(
+          //     { _id: "656865c28f74a90a4e59677a",
+          //       'data._id': "6568679e1db1fa383615b035",
+          //   },
+          //      {$set: {
+          //       'data.$.price': body.price4
+          //      } },
+          //   );  
+          // }
           
       // await newData.save()
 

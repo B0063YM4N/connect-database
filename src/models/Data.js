@@ -22,13 +22,13 @@ const dataSchema = new Schema({
 
 })
 
-const dataArray = new Schema({
-  message: {
-    type: String,
-    required: true,
-  },
-  data: [dataSchema]
-})
+// const dataArray = new Schema({
+//   message: {
+//     type: String,
+//     required: true,
+//   },
+//   data: [dataSchema]
+// })
 
 export default mongoose.models.Data ||
-  mongoose.model("Data", dataArray);
+  mongoose.model("Data", dataSchema);
