@@ -28,7 +28,19 @@ export default function Home() {
     }
 
   }
-  
+  /**
+             price1,
+          price2,
+          price3,
+          price4,
+          message: "ok",
+          data: {
+            id: 2,
+            price: 1,
+            nameGe: "aaaaa",
+            nameEn: "aabbbba",
+          }
+   */
   return (
     <div>
       <form onSubmit={habdleAddData}>
