@@ -42,37 +42,45 @@ export default function Home() {
           }
    */
   return (
-    <div>
-      <form onSubmit={habdleAddData}>
+    <div className="container">
+
+       <h1 className="titlee">
+        Change Price
+       </h1>
+      <form className="forminp" onSubmit={habdleAddData}>
       <input
-        className="text-blue-900"
+        className="text-blue-900 formitem"
         type="number"
         step="any"
         id="price1"
         name="price1"
+        placeholder="Regular"
       />
       <input
-        className="text-blue-900"
+        className="text-blue-900 formitem"
         type="number"
         step="any"
         id="price2"
         name="price2"
+        placeholder="Premium"
       />
       <input
-        className="text-blue-900"
+        className="text-blue-900 formitem"
         type="number"
         step="any"
         id="price3"
         name="price3"
+        placeholder="Diesel"
       />
       <input
-        className="text-blue-900"
+        className="text-blue-900 formitem"
         type="number"
         step="any"
         id="price4"
         name="price4"
+        placeholder="Euro Diesel"
       />
-      <button type='submit'>ADD</button>
+      <button type='submit' className="text-white btn-blue">UPLOAD</button>
     </form>
     </div>
 
