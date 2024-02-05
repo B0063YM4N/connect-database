@@ -25,5 +25,5 @@ const addressSchema = new Schema({
 //   data: [dataSchema]
 // })
 
-export default mongoose.models.Data ||
+export default mongoose.models.addresses ||
   mongoose.model("addresses", addressSchema);
