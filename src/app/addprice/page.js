@@ -9,6 +9,7 @@ export default function Home() {
     const price2 = e.target[1].value;
     const price3 = e.target[2].value;
     const price4 = e.target[3].value;
+    const price5 = e.target[4].value;
 
     try {
       const res = await fetch("/api/data", {
@@ -21,6 +22,7 @@ export default function Home() {
           price2,
           price3,
           price4,
+          price5,
         }),
       });
     } catch (error) {
@@ -79,6 +81,14 @@ export default function Home() {
         id="price4"
         name="price4"
         placeholder="Euro Diesel"
+      />
+      <input
+        className="text-blue-900 formitem"
+        type="number"
+        step="any"
+        id="price5"
+        name="price5"
+        placeholder="Super"
       />
       <button type='submit' className="text-white btn-blue">UPLOAD</button>
     </form>

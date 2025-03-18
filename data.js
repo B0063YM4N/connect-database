@@ -25,6 +25,12 @@ const data = {
         nameEn: "Euro Diesel",
         price: null,
       },
+      {
+        id: 5,
+        nameGe: "სუპერი",
+        nameEn: "Super",
+        price: null,
+      },
     ],
   };
 

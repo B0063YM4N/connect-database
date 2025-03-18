@@ -51,6 +51,12 @@ export const POST = async (request) => {
            { price: body.price4 } 
         );
         }
+        if (body.price5 !== null && body.price5 !== "" && body.price5 !== undefined) {
+          await Data.findOneAndUpdate(
+          { _id: "67d9fb746b56b88c965965f9"},
+           { price: body.price5 } 
+        );
+        }
 
       // await Data.findOneAndUpdate(
       //       { _id: "656865c28f74a90a4e59677a"},
