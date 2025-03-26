@@ -10,6 +10,7 @@ export default function Home() {
     const price3 = e.target[2].value;
     const price4 = e.target[3].value;
     const price5 = e.target[4].value;
+    const price6 = e.target[5].value;
 
     try {
       const res = await fetch("/api/data", {
@@ -23,6 +24,7 @@ export default function Home() {
           price3,
           price4,
           price5,
+          price6,
         }),
       });
     } catch (error) {
@@ -56,7 +58,7 @@ export default function Home() {
         step="any"
         id="price1"
         name="price1"
-        placeholder="Regular"
+        placeholder="Super"
       />
       <input
         className="text-blue-900 formitem"
@@ -72,7 +74,7 @@ export default function Home() {
         step="any"
         id="price3"
         name="price3"
-        placeholder="Diesel"
+        placeholder="Regular"
       />
       <input
         className="text-blue-900 formitem"
@@ -88,7 +90,15 @@ export default function Home() {
         step="any"
         id="price5"
         name="price5"
-        placeholder="Super"
+        placeholder="Diesel"
+      />
+      <input
+        className="text-blue-900 formitem"
+        type="number"
+        step="any"
+        id="price6"
+        name="price6"
+        placeholder="LPG"
       />
       <button type='submit' className="text-white btn-blue">UPLOAD</button>
     </form>

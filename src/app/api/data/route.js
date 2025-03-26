@@ -29,7 +29,7 @@ export const POST = async (request) => {
 
       if (body.price1 !== null && body.price1 !== "" && body.price1 !== undefined) {
         await Data.findOneAndUpdate(
-          { _id: "65686b2f505b0981400de648"},
+          { _id: "67d9fb746b56b88c965965f9"},
           { price: body.price1 } 
         );
       }
@@ -41,7 +41,7 @@ export const POST = async (request) => {
         }
         if (body.price3 !== null && body.price3 !== "" && body.price3 !== undefined) {
           await Data.findOneAndUpdate(
-          { _id: "65686b2f505b0981400de647"},
+          { _id: "65686b2f505b0981400de648"},
            { price: body.price3 } 
         );
         }
@@ -53,8 +53,14 @@ export const POST = async (request) => {
         }
         if (body.price5 !== null && body.price5 !== "" && body.price5 !== undefined) {
           await Data.findOneAndUpdate(
-          { _id: "67d9fb746b56b88c965965f9"},
+          { _id: "65686b2f505b0981400de647"},
            { price: body.price5 } 
+        );
+        }
+        if (body.price6 !== null && body.price6 !== "" && body.price6 !== undefined) {
+          await Data.findOneAndUpdate(
+          { _id: "67e471a4cb411e54522179bb"},
+           { price: body.price6 } 
         );
         }
 
